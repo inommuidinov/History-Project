@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>История</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <span class="header_name">Нам Пётр Великий ввёл науки</span>
+    </nav>
+</header>
+<div class="middle">
+    <a href="#">
+        <aside class="right_game" id="right_game">
+            <span>Хочу проверить свои знания</span>
+        </aside>
+    </a>
+    <a href="#">
+        <aside class="left_info" id="left_info">
+            <span>Хочу изучить что-нибудь новое</span>
+        </aside>
+    </a>
+    <main class="none" id="history_themes">
+        <div class="krest" id="krest">+</div>
+        <ul>
+            <li><a href="#">Первая тема</a></li>
+            <li><a href="#">Вторая тема</a></li>
+            <li><a href="#">Третья тема</a></li>
+            <li><a href="#">Четвертая тема</a></li>
+            <li><a href="#">Пятая тема</a></li>
+            <li><a href="#">Шестая тема</a></li>
+        </ul>
+    </main>
+    <main class="none" id="history_games">
+        <div class="krest" id="krest2">+</div>
+        <ul>
+            <li><a href="#">Первая игра</a></li>
+            <li><a href="#">Вторая игра</a></li>
+            <li><a href="#">Третья игра</a></li>
+        </ul>
+    </main>
+</div>
+<footer>
+</footer>
+</body>
+</html>
+<script>
+    let main1 = document.getElementById("history_themes");
+    let button1 = document.getElementById("left_info");
+    button1.onclick = function () {
+        main1.classList.remove("none");
+        main1.classList.add("themes_data_visible");
+    }
+    let exit1 = document.getElementById("krest");
+    exit1.onclick = function () {
+        main1.classList.remove("themes_data_visible");
+        main1.classList.add("none");
+    }
+    let main2 = document.getElementById("history_games");
+    let button2 = document.getElementById("right_game");
+    button2.onclick = function () {
+        main2.classList.remove("none");
+        main2.classList.add("themes_data_visible");
+    }
+    let exit2 = document.getElementById("krest2");
+    exit2.onclick = function () {
+        main2.classList.remove("themes_data_visible");
+        main2.classList.add("none");
+    }
+</script>
